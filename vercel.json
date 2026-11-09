@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index?route=/api/:path*"
+    },
+    {
+      "source": "/disc/:token",
+      "destination": "/api/index?route=/disc/:token"
+    },
+    {
+      "source": "/offline/:token",
+      "destination": "/api/index?route=/offline/:token"
+    }
+  ],
+  "framework": null,
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "public/static/survey.html"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "conexao-talentos-web",
+  "version": "2.0.0-beta.1",
+  "private": true,
+  "type": "module",
+  "description": "Conexao Talentos - recrutamento, funil, DISC e relatorios - interface HTML CSS JS, API Node.js, Google Drive",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check server.js && node --check lib/logic.js && node --check lib/storage.js && node --check lib/auth.js && node --check public/static/app.js"
+  }
+}
